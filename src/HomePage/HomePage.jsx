@@ -1,7 +1,21 @@
 import React from "react";
 import headerImage from "../assets/MySkillsLeftImage.png";
+import {Link, useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+
+  const nav = useNavigate();
+
+  const optionHandelChange = (e)=>{
+      const selectOption = e.target.value;
+      console.log(selectOption)
+
+      if(selectOption){
+        nav(selectOption)
+      }
+
+  }
+
   return (
     <div className="p-5 lg:p-8 text-gray-800">
       <section className=" bg-purple-100 rounded-2xl p-5">
@@ -32,10 +46,10 @@ export default function HomePage() {
             <div className="hidden lg:block">
               <ul className="flex ">
                 <li className="ms-5 p-2 border hover:border-gray-400  rounded-md">
-                  Home
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="ms-5 p-2 border hover:border-gray-400  rounded-md">
-                  About
+                  <Link to="/about">About</Link>
                 </li>
                 <li className="ms-5 p-2 border hover:border-gray-400  rounded-md">
                   Service
@@ -45,6 +59,13 @@ export default function HomePage() {
                 </li>
                 <li className="ms-5 p-2 border hover:border-gray-400  rounded-md">
                   Contact
+                </li>
+                <li className="ms-5 p-2 border hover:border-gray-400  rounded-md">
+                  <select name="" id="" onChange={optionHandelChange} className="bg-transparent text-center" defaultValue={""}>
+                    <option className="bg-transparent" value="" disabled >Practices</option>
+                    <option className="bg-transparent" value="/hookpracties">Hook Practies  </option>
+                    <option className="bg-transparent" value="/formvalidation">Form Validation  </option>
+                  </select>
                 </li>
               </ul>
             </div>
