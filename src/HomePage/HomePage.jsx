@@ -65,6 +65,7 @@ export default function HomePage() {
                     <option className="bg-transparent" value="" disabled >Practices</option>
                     <option className="bg-transparent" value="/hookpracties">Hook Practies  </option>
                     <option className="bg-transparent" value="/formvalidation">Form Validation  </option>
+                    <option className="bg-transparent" value="/curdjavascript">Curd JavaScript  </option>
                   </select>
                 </li>
               </ul>

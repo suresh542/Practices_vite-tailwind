@@ -4,6 +4,7 @@ import HomePage from './HomePage/HomePage'
 import HookPracties from './Practies/HookPracties'
 import About from './About/About'
 import FormValidation from './Practies/FormValidation'
+import CurdJS from './Practies/CurdJS'
 
 export default function PageRoute() {
   return (
@@ -13,6 +14,7 @@ export default function PageRoute() {
             <Route path="/about" element={<About/>} />
             <Route path="/hookpracties" element={<HookPracties/>} />
             <Route path="/formvalidation" element={<FormValidation/>} />
+            <Route path="/curdjavascript" element={<CurdJS/>} />
         </Routes>
     </div>
   )
